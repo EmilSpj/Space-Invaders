@@ -45,4 +45,3 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
             
-main()
