@@ -40,6 +40,17 @@ Download the code, Python and Pygame. Then run it with this command.
 python3 main.py
 ```
 
+#### Customization
+
+You can enable or disable sound from the enemy lasers, it is disabled as a default. It is removed becuas its a noisy and the audio gets buggy.
+
+To enable remove the # from this lines
+
+```py
+151 #           BULLET_FIRE_SOUND.play()
+```
+
+
 [Back To The Top](#read-me-template)
 
 ---

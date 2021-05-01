@@ -4,11 +4,15 @@ import time
 import random
 
 pygame.font.init()
+pygame.mixer.init()
 WIDTH, HEIGHT = 750,750
 
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption('Space Invaders')
 
+#Load Audio
+BULLET_HIT_SOUND = pygame.mixer.Sound(os.path.join('assets', 'hit_sound.wav'))
+BULLET_FIRE_SOUND = pygame.mixer.Sound(os.path.join('assets', 'shoot_sound.wav'))
 
 # Load IMG
 # Enemy ship
@@ -48,7 +52,6 @@ class Laser:
     def collision (self, obj):
         return collide(self, obj)
 
-
 class Ship:
     COOLDOWN = 30
 
@@ -74,6 +77,7 @@ class Ship:
                 self.lasers.remove(laser)
             elif laser.collision(obj):
                 obj.health -= 10
+                BULLET_HIT_SOUND.play()
                 self.lasers.remove(laser)
 
     def cooldown(self):
@@ -84,6 +88,7 @@ class Ship:
 
     def shoot(self):
         if self.cool_down_counter == 0:
+            BULLET_FIRE_SOUND.play()
             laser = Laser(self.x, self.y, self.laser_img)
             self.lasers.append(laser)
             self.cool_down_counter = 1
@@ -111,6 +116,7 @@ class Player(Ship):
             else: 
                 for obj in objs:
                     if laser.collision(obj):
+                        BULLET_HIT_SOUND.play()
                         objs.remove(obj)
                         if laser in self.lasers:
                             self.lasers.remove(laser)
@@ -140,6 +146,7 @@ class Enemy(Ship):
 
     def shoot(self):
         if self.cool_down_counter == 0:
+#           BULLET_FIRE_SOUND.play()
             laser = Laser(self.x-20, self.y, self.laser_img)
             self.lasers.append(laser)
             self.cool_down_counter = 1
@@ -191,7 +198,6 @@ def main():
 
         pygame.display.update()
 
-
     while run:
         clock.tick(FPS)
         redraw_window()
@@ -239,6 +245,7 @@ def main():
 
             if collide(enemy, player):
                 player.health -= 10
+                BULLET_HIT_SOUND.play()
                 enemies.remove(enemy)
 
             elif enemy.y + enemy.get_height() > HEIGHT:

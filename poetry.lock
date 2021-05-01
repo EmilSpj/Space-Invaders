@@ -1,7 +1,7 @@
 [[package]]
-category = "main"
-description = "Python Game Development"
-name = "pygame"
+category = "space"
+description = "A space game that is fun to play :)"
+name = "Space Inveders"
 optional = false
 python-versions = "*"
 version = "2.0.1"
