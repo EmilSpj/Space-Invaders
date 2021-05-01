@@ -186,7 +186,7 @@ def main():
         player.draw(WIN)
 
         if lost:
-            lost_label = lost_font.render('Du Tapte!!', 1, (255,255,255))
+            lost_label = lost_font.render('You Lost :(', 1, (255,255,255))
             WIN.blit(lost_label, (WIDTH/2 - lost_label.get_width()/2, 350))
 
         pygame.display.update()
@@ -252,7 +252,7 @@ def main_menu():
     run = True
     while run:
         WIN.blit(BG, (0,0))
-        title_label = title_font.render('Trykk på musa for å starte!', 1, (255,255,255))
+        title_label = title_font.render('Click the mouse to start!', 1, (255,255,255))
         WIN.blit(title_label, (WIDTH/2 - title_label.get_width()/2, 350))
         pygame.display.update()
 
