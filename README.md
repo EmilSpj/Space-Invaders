@@ -19,7 +19,7 @@ Here is a simple Navigation to help you find what your looking for 😎
 
 ## Description
 
-This is my first ever project here on GitHub and my first ever game using PyGame. It is also the first python project I have done, but I will not take all the credit for this project because I have followed a good tutorial by the Youtuber Tech With Tim.
+This is my first ever project here on GitHub and my first ever game using PyGame. It is also the first python project I have done, but I will not take all the credit for this project because I have followed a good tutorial by the YouTuber Tech With Tim.
 
 #### Technologies
 
@@ -36,7 +36,7 @@ This is my first ever project here on GitHub and my first ever game using PyGame
 #### Installation
 
 Download the code, Python and Pygame. Then run it with this command. 
-```html
+```powershell
 python3 main.py
 ```
 
@@ -56,9 +56,10 @@ To enable remove the # from this lines
 ---
 
 ## References
-[Back To The Top](#read-me-template)
 
 [Tech Whit Tim - Pygame Tutorial](https://www.youtube.com/watch?v=Q-__8Xw9KTM)
+
+[Back To The Top](#read-me-template)
 
 ---
 
