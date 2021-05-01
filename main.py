@@ -224,7 +224,7 @@ def main():
             player.x += player_vel
         if keys[pygame.K_w] and player.y - player_vel > 0: # Up
             player.y -= player_vel 
-        if keys[pygame.K_s] and player.y + player_vel + player.get_height() + 15 < HEIGHT: # Down
+        if keys[pygame.K_s] and player.y + player_vel + player.get_height() + 15 < HEIGHT: # ned
             player.y += player_vel
         if keys[pygame.K_SPACE]:
             player.shoot()
