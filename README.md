@@ -37,7 +37,7 @@ This is my first ever project here on GitHub and my first ever game using PyGame
 
 Download the code, Python and Pygame. Then run it with this command. 
 ```html
-    python3 main.py
+python3 main.py
 ```
 
 [Back To The Top](#read-me-template)
