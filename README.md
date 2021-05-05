@@ -44,7 +44,7 @@ python3 main.py
 
 You can enable or disable sound from the enemy lasers, it is disabled as a default. It is removed becuas its a noisy and the audio gets buggy.
 
-To enable remove the # from this lines
+To enable remove the # from this line
 
 ```py
 151 #           BULLET_FIRE_SOUND.play()
